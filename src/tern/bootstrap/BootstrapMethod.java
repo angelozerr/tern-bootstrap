@@ -9,6 +9,7 @@ public class BootstrapMethod extends BootstrapItem {
 	private final boolean staticMethod;
 	private final List<BootstrapParameter> parameters;
 	private IType returnValue;
+	private String url;
 
 	public BootstrapMethod(String name, IType returnValue, boolean staticMethod) {
 		this.name = name;
@@ -26,7 +27,7 @@ public class BootstrapMethod extends BootstrapItem {
 	}
 
 	public String getUrl() {
-		return null;
+		return url;
 	}
 
 	public boolean hasReturnValue() {
@@ -43,5 +44,9 @@ public class BootstrapMethod extends BootstrapItem {
 
 	public List<BootstrapParameter> getParameters() {
 		return parameters;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
 	}
 }

@@ -171,7 +171,9 @@ public class TernDefBootstrapApiHandler extends AbstractBootstrapApiHandler {
 		if ("this".equals(returnValue)) {
 			return "!this";
 		}
-		if ("Boolean".equalsIgnoreCase(returnValue)) {
+		if ("Boolean".equalsIgnoreCase(returnValue)
+				|| "tru".equalsIgnoreCase(returnValue)
+				|| "false".equalsIgnoreCase(returnValue)) {
 			return "bool";
 		}
 		if ("Number".equalsIgnoreCase(returnValue)
